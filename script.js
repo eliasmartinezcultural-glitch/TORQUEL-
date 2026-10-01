@@ -10,7 +10,7 @@ function openWhatsApp(message){
 document.querySelectorAll("[data-wa]").forEach(link=>{
   link.addEventListener("click",e=>{
     e.preventDefault();
-    openWhatsApp(link.dataset.message||"Hola Gastón, quiero consultar por TORQUEL.");
+    openWhatsApp(link.dataset.message||"Hola Gastón, quiero consultar por TORQUEL.\n\nMe gustaría recibir información sobre disponibilidad, alcance del trabajo y presupuesto.\n\nGracias.");
   });
 });
 
@@ -37,15 +37,26 @@ form?.addEventListener("submit",e=>{
     return;
   }
 
+  const site="https://eliasmartinezcultural-glitch.github.io/TORQUEL-/";
   const message=[
-    "Hola Gastón, quiero consultar por TORQUEL.",
+    "TORQUEL / SOLICITUD DE SERVICIO",
+    "━━━━━━━━━━━━━━━━━━━━",
     "",
-    "SERVICIO: "+service,
-    company?"EMPRESA / EQUIPO: "+company:"",
-    location?"UBICACIÓN: "+location:"",
-    "REQUERIMIENTO: "+need,
+    "Hola Gastón.",
+    "Quiero consultar por el siguiente trabajo:",
     "",
-    "Quedo atento/a para coordinar disponibilidad, alcance y presupuesto."
+    "SERVICIO",
+    service,
+    company?"EMPRESA / EQUIPO\n"+company:"",
+    location?"UBICACIÓN\n"+location:"",
+    "REQUERIMIENTO",
+    need,
+    "",
+    "━━━━━━━━━━━━━━━━━━━━",
+    "Quedo atento/a para coordinar disponibilidad, alcance y presupuesto.",
+    "",
+    "Ficha TORQUEL:",
+    site
   ].filter(Boolean).join("\n");
 
   openWhatsApp(message);

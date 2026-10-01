@@ -10,3 +10,38 @@
 footer{max-width:var(--max);margin:auto;padding:28px max(18px,4vw);display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);color:#636c70;font-size:8px;letter-spacing:.12em}footer .logo{color:var(--text)}
 @media(max-width:850px){.header nav{display:none}.technical-orb{right:-18vw;width:68vw;opacity:.38}.hero{min-height:calc(100svh - 100px)}.hero-copy{max-width:100%}.hero h1{font-size:clamp(72px,19vw,125px)}.section-head,.method-grid,.evidence{grid-template-columns:1fr;gap:35px}.service-grid{grid-template-columns:1fr}.service{min-height:460px}.statement,.founder{grid-template-columns:1fr;gap:35px}.founder-mark{display:none}.contact-box{display:block}.contact-actions{margin-top:35px}.steps>div{grid-template-columns:42px 1fr}.steps span{grid-column:2}.hero-bottom span:nth-child(2){display:none}}
 @media(max-width:480px){.topline{font-size:6px}.topline span:last-child{display:none}.header{height:64px}.header .mini-cta{font-size:8px}.logo{font-size:12px}.hero{padding-top:75px}.hero h1{font-size:68px}.hero-text{font-size:15px}.hero-bottom{font-size:6px}.wrap{padding-top:70px;padding-bottom:70px}.wrap h2{font-size:55px}.service h3{font-size:48px}.placeholder-photo{inset:70px 28px 95px}.evidence-board{min-height:390px}.contact-actions strong{font-size:14px}footer{display:grid;grid-template-columns:1fr 1fr}footer>span:last-child{text-align:right}}
+
+/* TORQUEL 2.1 — corporate / B2B visual system */
+.hero:after{content:"";position:absolute;inset:auto 0 0;height:1px;background:var(--accent);opacity:.65}
+.hero-copy{max-width:920px}.hero h1{max-width:1000px}
+.hero-text{max-width:650px}
+.corporate{background:#0b0e10}
+.corporate-top{display:grid;grid-template-columns:1.15fr .85fr;gap:8vw;align-items:end;margin-bottom:55px}
+.corporate-top h2{margin-bottom:0}
+.corporate-top>p{color:#929b9e;font-size:14px;max-width:500px}
+.corporate-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.corporate-grid article{min-height:330px;background:#111518;padding:25px;position:relative;transition:transform .25s ease,background .25s ease}
+.corporate-grid article:hover{background:#171d20;transform:translateY(-5px)}
+.corp-index{position:absolute;top:20px;right:22px;color:#596367;font:700 11px var(--display);letter-spacing:.15em}
+.corp-icon{height:120px;display:flex;align-items:center;color:var(--accent);font:400 88px/.8 var(--display);border-bottom:1px solid #242c2f;margin-bottom:28px}
+.corporate-grid h3{font:800 24px/.9 var(--display);letter-spacing:.04em;margin:0 0 13px}
+.corporate-grid p{font-size:11px;color:#80898c;max-width:250px}
+.company-strip{margin-top:1px;border:1px solid #323a3d;background:#101416;display:flex;align-items:center;gap:25px;padding:20px 22px;flex-wrap:wrap}
+.company-strip span{font-size:8px;color:#687174;letter-spacing:.16em}
+.company-strip strong{font-size:8px;letter-spacing:.14em}
+.company-strip a{margin-left:auto;color:var(--accent);font-size:8px;font-weight:700;letter-spacing:.14em}
+.contact-actions strong{font-size:16px}
+.contact-actions a{min-height:82px}
+@media(max-width:850px){
+.corporate-top{grid-template-columns:1fr;gap:30px}
+.corporate-grid{grid-template-columns:1fr 1fr}
+.company-strip{display:grid;grid-template-columns:1fr 1fr;gap:15px}
+.company-strip a{margin-left:0;grid-column:1/-1}
+}
+@media(max-width:480px){
+.corporate-grid{grid-template-columns:1fr}
+.corporate-grid article{min-height:280px}
+.corp-icon{height:90px;font-size:70px}
+.company-strip{grid-template-columns:1fr}
+.company-strip a{grid-column:auto}
+}

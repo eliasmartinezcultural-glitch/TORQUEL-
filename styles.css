@@ -50,3 +50,13 @@ body{background:radial-gradient(circle at 78% 8%,rgba(39,196,255,.06),transparen
 .gallery-track figcaption{position:absolute;z-index:2;left:14px;bottom:13px;font:700 10px var(--sans);letter-spacing:.14em;color:#d7e0e3}
 @media(max-width:850px){.evidence-top{grid-template-columns:1fr;gap:24px}.evidence-board{grid-template-columns:1fr;grid-template-rows:300px 200px 200px}.board-photo{grid-row:auto}.gallery-track{grid-template-columns:repeat(2,1fr)}.gallery-track figure{height:210px}}
 @media(max-width:480px){.evidence-board{grid-template-rows:280px 210px 190px}.board-data{padding:18px}.board-data strong{font-size:31px}.board-meta{right:18px}.gallery-track{grid-template-columns:1fr 1fr}.gallery-track figure{height:170px}.gallery-track figcaption{font-size:8px;left:10px;bottom:10px}}
+
+.hero{isolation:isolate}
+.hero:after{content:"";position:absolute;inset:0;z-index:0;background:linear-gradient(90deg,rgba(7,16,24,.97) 0%,rgba(7,16,24,.88) 43%,rgba(7,16,24,.28) 100%),url("https://images.pexels.com/photos/10290629/pexels-photo-10290629.jpeg?auto=compress&cs=tinysrgb&w=1800") center/cover no-repeat;opacity:.58;mix-blend-mode:screen;pointer-events:none}
+.hero-copy,.technical-orb,.hero-bottom,.hero-mark{z-index:3}
+.image-viewer{position:fixed;inset:0;z-index:100;background:rgba(2,7,10,.94);backdrop-filter:blur(12px);display:grid;place-items:center;padding:7vh 5vw;opacity:0;pointer-events:none;transition:.25s}
+.image-viewer.open{opacity:1;pointer-events:auto}
+.image-viewer img{max-width:min(1100px,94vw);max-height:82vh;width:auto;height:auto;object-fit:contain;border:1px solid #38515d;box-shadow:0 25px 100px rgba(0,0,0,.6)}
+.image-viewer button{position:absolute;top:20px;right:25px;width:42px;height:42px;border:1px solid #536873;background:#0b151c;color:#fff;font-size:28px;cursor:pointer}
+.image-viewer span{position:absolute;left:5vw;bottom:20px;right:5vw;color:#aebec5;font-size:8px;letter-spacing:.14em;text-transform:uppercase}
+@media(max-width:480px){.hero:after{opacity:.4;background:linear-gradient(180deg,rgba(7,16,24,.94),rgba(7,16,24,.68) 55%,rgba(7,16,24,.96)),url("https://images.pexels.com/photos/10290629/pexels-photo-10290629.jpeg?auto=compress&cs=tinysrgb&w=1200") center/cover}.image-viewer{padding:10vh 4vw}.image-viewer img{max-width:92vw;max-height:72vh}.image-viewer span{font-size:7px}}

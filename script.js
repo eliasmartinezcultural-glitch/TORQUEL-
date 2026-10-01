@@ -84,4 +84,4 @@ const observer=new IntersectionObserver(entries=>{
     }
   });
 },{threshold:.08});
-document.querySelectorAll(".service,.process-line>div,.quote-form").forEach(el=>observer.observe(el));
+document.querySelectorAll(".service,.quote-form").forEach(el=>observer.observe(el));

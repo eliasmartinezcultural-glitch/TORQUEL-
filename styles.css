@@ -204,3 +204,44 @@ body{overflow-x:hidden}
     min-height:184px;
   }
 }
+
+
+/* TORQUEL FINAL — multidispositivo hardening */
+html{width:100%;overflow-x:hidden;-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth}
+body{width:100%;min-width:0;overflow-x:hidden;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img{max-width:100%}
+button,a,input,select,textarea{-webkit-tap-highlight-color:transparent}
+button,.btn,.mini-cta,.mobile-wa,.service-select{touch-action:manipulation}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.quote-form input,.quote-form select,.quote-form textarea{font-size:16px}
+.quote-form textarea{max-width:100%}
+.hero,.field-strip,.service-grid,.contact-layout,.section-head,.hero-bottom,footer{min-width:0}
+@media(max-width:850px){
+  .hero-copy,.section-head>div,.section-head>p,.contact-layout>div,.quote-form,.field-copy{min-width:0}
+  .hero h1,.wrap h2,.service h3,.field-copy h2{overflow-wrap:anywhere}
+  .hero{padding-left:max(16px,4vw);padding-right:max(16px,4vw)}
+}
+@media(max-width:480px){
+  .topline,.header{padding-left:14px;padding-right:14px}
+  .header .logo span{display:none}
+  .hero-bottom{left:14px;right:14px}
+  .hero-bottom span:first-child{max-width:75%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .service-select{min-height:44px}
+  .send{font-size:10px}
+  .send span{max-width:65%;line-height:1.2}
+  footer{gap:12px}
+  footer>span:nth-child(2){text-align:right}
+}
+@media(min-width:851px) and (max-width:1100px){
+  .hero h1{font-size:clamp(76px,11vw,126px)}
+  .technical-orb{width:min(39vw,470px);right:2vw}
+}
+@media(hover:none){
+  .service:hover{transform:none}
+  .service:hover .service-thumb img,.field-strip:hover .field-photo img{transform:none}
+  .btn.primary:hover,.send:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}

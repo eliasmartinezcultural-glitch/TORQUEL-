@@ -66,3 +66,22 @@ const observer=new IntersectionObserver(entries=>{
  });
 },{threshold:.08});
 document.querySelectorAll(".service,.process-line>div,.quote-form").forEach(el=>observer.observe(el));
+document.querySelectorAll(".visual-card,.board-photo,.board-detail,.gallery-track figure").forEach(el=>{
+  el.addEventListener("click",()=>{
+    const img=el.querySelector("img");
+    if(!img)return;
+    let viewer=document.querySelector(".image-viewer");
+    if(!viewer){
+      viewer=document.createElement("div");
+      viewer.className="image-viewer";
+      viewer.innerHTML='<button type="button" aria-label="Cerrar">×</button><img alt=""><span></span>';
+      document.body.appendChild(viewer);
+      viewer.addEventListener("click",e=>{if(e.target===viewer||e.target.tagName==="BUTTON")viewer.classList.remove("open")});
+      document.addEventListener("keydown",e=>{if(e.key==="Escape")viewer.classList.remove("open")});
+    }
+    viewer.querySelector("img").src=img.currentSrc||img.src;
+    viewer.querySelector("img").alt=img.alt;
+    viewer.querySelector("span").textContent=img.alt;
+    viewer.classList.add("open");
+  });
+});

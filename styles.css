@@ -77,3 +77,131 @@ footer{max-width:var(--max);margin:auto;padding:28px max(18px,4vw);display:flex;
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.corporate-grid article,.dossier-card{transition:none}}
 :focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+
+
+/* TORQUEL 2.3 — art direction / industrial editorial */
+:root{--accent:#dfff32;--accent-soft:rgba(223,255,50,.14);--steel:#b8c0c2;--hair:#252d30}
+body{background:#080a0b}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E")}
+.header{box-shadow:0 10px 40px rgba(0,0,0,.18)}
+.header:after{content:"";position:absolute;left:0;bottom:-1px;width:18%;height:1px;background:var(--accent)}
+.header nav a{position:relative;padding:8px 0}
+.header nav a:after{content:"";position:absolute;left:0;bottom:1px;width:0;height:1px;background:var(--accent);transition:width .25s}
+.header nav a:hover:after{width:100%}
+.mini-cta{position:relative;overflow:hidden}
+.mini-cta:before{content:"";position:absolute;inset:0;background:var(--accent);transform:translateX(-105%);transition:transform .25s;z-index:-1}
+.mini-cta:hover:before{transform:translateX(0)}
+.mini-cta:hover{color:#080a0b;border-color:var(--accent)}
+.hero{min-height:calc(100svh - 100px);background:radial-gradient(circle at 73% 44%,#283135 0,#141a1d 19%,#0a0c0e 56%),#090b0d}
+.hero-bg{opacity:.25;background-size:54px 54px;mask-image:linear-gradient(90deg,black 0%,black 48%,transparent 92%)}
+.hero:before{content:"";position:absolute;right:4vw;top:12%;width:min(50vw,720px);height:76%;border:1px solid rgba(223,255,50,.12);clip-path:polygon(18% 0,100% 0,100% 82%,82% 100%,0 100%,0 18%);pointer-events:none}
+.hero-copy{max-width:980px}
+.hero h1{font-size:clamp(88px,13.5vw,194px);line-height:.76;text-transform:uppercase}
+.hero h1 span{-webkit-text-stroke:1px rgba(235,238,231,.65)}
+.hero-text{font-size:clamp(17px,1.7vw,22px);line-height:1.45;border-left:2px solid var(--accent);padding-left:18px}
+.actions{margin-top:34px}
+.btn{min-height:52px;transition:all .22s}
+.btn.primary{box-shadow:0 0 0 0 var(--accent-soft)}
+.btn.primary:hover{box-shadow:0 0 0 8px var(--accent-soft);transform:translateY(-2px)}
+.btn.secondary{background:rgba(255,255,255,.015)}
+.technical-orb{width:min(39vw,600px);right:4vw;border-color:#465155;box-shadow:0 0 0 18px rgba(255,255,255,.012),0 0 100px rgba(0,0,0,.35)}
+.technical-orb:before,.technical-orb:after{content:"";position:absolute;inset:-18px;border:1px solid rgba(223,255,50,.08);border-radius:50%;transform:rotate(18deg)}
+.technical-orb:after{inset:-35px;border-color:rgba(255,255,255,.035);transform:rotate(-25deg)}
+.orb-grid{inset:7%;background:repeating-linear-gradient(0deg,transparent 0 24px,rgba(255,255,255,.04) 25px),repeating-linear-gradient(90deg,transparent 0 24px,rgba(255,255,255,.04) 25px)}
+.orb-ring{inset:18%;border-style:dashed}
+.orb-needle{height:43%;width:2px;box-shadow:0 0 14px var(--accent)}
+.orb-dot{box-shadow:0 0 20px rgba(223,255,50,.5)}
+.hero-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:13px}
+.hero-measure{font-family:var(--display);font-size:10px}
+.statement{position:relative}
+.statement:before{content:"TQ";position:absolute;right:4vw;top:55px;font:800 clamp(130px,20vw,280px)/.7 var(--display);color:#0e1214;pointer-events:none}
+.statement-content{position:relative;z-index:1}
+.statement-content p{border-top:1px solid var(--hair);padding-top:22px}
+.wrap{position:relative}
+.wrap:after{content:"";position:absolute;left:4vw;bottom:-1px;width:70px;height:1px;background:#414a4d}
+.section-head h2,.corporate-top h2,.method-grid h2,.evidence-intro h2,.dossier-head h2,.sector-layout h2,.intake-head h2,.founder h2,.contact-box h2{letter-spacing:-.045em}
+.service-grid{box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.service{min-height:610px;background:linear-gradient(150deg,#14191c,#0e1214);overflow:hidden}
+.service:before{content:"";position:absolute;inset:0;background:linear-gradient(125deg,transparent 0 65%,rgba(223,255,50,.04) 65% 65.5%,transparent 65.5%);pointer-events:none}
+.service .num{position:absolute;right:25px;top:24px;font-size:40px;color:#283034}
+.service-visual{height:170px;margin-top:35px;position:relative}
+.pressure{align-items:flex-end;padding-left:8px;gap:12px}
+.pressure:before{content:"PRESSURE";position:absolute;left:0;top:5px;font:700 9px var(--sans);letter-spacing:.2em;color:#566064}
+.pressure span{width:10px;box-shadow:0 0 18px rgba(223,255,50,.08)}
+.pressure span:nth-child(1){height:45px}.pressure span:nth-child(2){height:120px}.pressure span:nth-child(3){height:76px}.pressure span:nth-child(4){height:145px}
+.mount{border:1px solid #394347!important;background:linear-gradient(90deg,transparent 49.7%,#394347 49.8%,#394347 50.2%,transparent 50.3%),linear-gradient(0deg,transparent 49.7%,#394347 49.8%,#394347 50.2%,transparent 50.3%);font-size:105px!important;color:var(--accent)}
+.torque{font-size:125px!important;border:1px solid #30393c;justify-content:center;background:repeating-conic-gradient(from 0deg,transparent 0 12deg,#171d20 13deg 14deg)}
+.service h3{font-size:61px}
+.service p{font-size:13px;line-height:1.65}
+.service>a{border-top:1px solid #293135;transition:padding-left .2s}
+.service>a:hover{padding-left:10px}
+.corporate{background:linear-gradient(180deg,#0b0e10,#090c0e)}
+.corporate-grid{box-shadow:0 20px 60px rgba(0,0,0,.22)}
+.corporate-grid article{min-height:370px;background:linear-gradient(150deg,#13181b,#0d1113);overflow:hidden}
+.corporate-grid article:after{content:"";position:absolute;right:-35px;bottom:-45px;width:150px;height:150px;border:1px solid rgba(223,255,50,.09);border-radius:50%}
+.corp-icon{font-size:105px}
+.company-strip{background:#0b0f11;border-left:3px solid var(--accent)}
+.method{background:linear-gradient(90deg,#0d1012,#0a0d0f)}
+.steps>div{position:relative;transition:background .2s,padding-left .2s}
+.steps>div:hover{background:#11171a;padding-left:12px}
+.steps>div:after{content:"";position:absolute;left:0;bottom:-1px;width:0;height:1px;background:var(--accent);transition:width .3s}
+.steps>div:hover:after{width:100%}
+.evidence{background:radial-gradient(circle at 80% 40%,#151c1f,#0b0e10 50%)}
+.evidence-board{min-height:510px;box-shadow:0 30px 80px rgba(0,0,0,.28);background:#0b0f11}
+.evidence-board:before{content:"NO. 001 / FIELD EVIDENCE";position:absolute;left:20px;bottom:72px;font:700 8px var(--sans);letter-spacing:.16em;color:#424b4f}
+.placeholder-photo{background:linear-gradient(135deg,#171e21,#0c1012);inset:65px 55px 105px}
+.placeholder-photo:before{content:"";position:absolute;inset:12%;border:1px solid rgba(223,255,50,.18);transform:skewY(-5deg)}
+.placeholder-photo span{font-size:36px;position:relative}
+.dossier{background:#0a0d0f}
+.dossier-grid{box-shadow:0 25px 70px rgba(0,0,0,.25)}
+.dossier-card{background:linear-gradient(145deg,#14191c,#0d1113);overflow:hidden}
+.dossier-card:after{content:"";position:absolute;right:20px;top:70px;width:8px;height:8px;background:var(--accent);box-shadow:0 0 18px rgba(223,255,50,.35)}
+.dossier-main{background:linear-gradient(145deg,#171d20,#0e1214)}
+.diagram{box-shadow:inset 0 0 0 1px rgba(255,255,255,.02)}
+.diagram:after{content:"";position:absolute;inset:12px;border:1px solid rgba(255,255,255,.035);pointer-events:none}
+.dossier-data{background:#0d1113}
+.dossier-data span{position:relative}
+.dossier-data span:before{content:"";display:inline-block;width:5px;height:5px;background:var(--accent);margin-right:8px}
+.sectors{background:linear-gradient(180deg,#0a0d0f,#0d1012)}
+.sector-list>div{transition:background .2s,transform .2s;padding-left:8px}
+.sector-list>div:hover{background:#12181b;transform:translateX(8px)}
+.sector-list>div strong{font:800 16px var(--display);letter-spacing:.08em}
+.intake{background:#0a0d0f}
+.intake-flow{box-shadow:0 25px 70px rgba(0,0,0,.25)}
+.intake-flow>div{position:relative;background:linear-gradient(145deg,#13181b,#0d1113)}
+.intake-flow>div:not(:last-child):after{content:"→";position:absolute;right:-8px;top:50%;transform:translateY(-50%);z-index:3;color:var(--accent);font-size:15px}
+.intake-flow>div:hover{background:#171d20;transform:translateY(-4px)}
+.intake-cta{background:linear-gradient(90deg,#12181a,#0d1113);border-color:#515b5e;min-height:90px}
+.intake-cta strong{font:800 21px var(--display);letter-spacing:.03em}
+.founder{background:#090c0e}
+.founder-mark{font-size:150px;opacity:.55}
+.founder>div:last-child{border-left:1px solid var(--hair);padding-left:45px}
+.contact{background:#090c0e}
+.contact-box{position:relative;overflow:hidden;min-height:330px;background:radial-gradient(circle at 75% 20%,#20292d,#111619 40%,#0b0e10 78%);box-shadow:0 30px 90px rgba(0,0,0,.35)}
+.contact-box:before{content:"TORQUEL";position:absolute;right:-15px;bottom:-55px;font:800 170px/.7 var(--display);letter-spacing:-.06em;color:rgba(255,255,255,.025);pointer-events:none}
+.contact-actions{position:relative;z-index:2}
+.contact-actions a{transition:all .25s;background:rgba(0,0,0,.15)}
+.contact-actions a:hover{transform:translateY(-3px);box-shadow:0 12px 35px rgba(223,255,50,.12)}
+footer{position:relative}
+@media(max-width:850px){
+.hero:before{right:-15vw;width:80vw;opacity:.55}
+.technical-orb{width:66vw;right:-14vw;opacity:.45}
+.hero h1{font-size:clamp(76px,18vw,130px)}
+.service{min-height:540px}
+.corporate-grid article{min-height:320px}
+.dossier-grid{grid-template-columns:1fr}
+.intake-flow>div:not(:last-child):after{content:"↓";right:auto;left:50%;top:auto;bottom:-11px;transform:translateX(-50%)}
+.founder>div:last-child{border-left:0;border-top:1px solid var(--hair);padding:35px 0 0}
+}
+@media(max-width:480px){
+.hero{min-height:calc(100svh - 92px);padding-bottom:95px}
+.hero:before{display:none}.technical-orb{width:80vw;right:-35vw;top:62%;opacity:.25}
+.hero h1{font-size:67px;line-height:.78}.hero-text{font-size:14px}
+.hero-bottom{bottom:15px}
+.service{min-height:500px}.service h3{font-size:50px}.service-visual{height:145px}
+.corporate-grid article{min-height:300px}
+.evidence-board{min-height:430px}.placeholder-photo{inset:65px 24px 105px}.placeholder-photo span{font-size:26px}
+.dossier-card{min-height:420px}.diagram{height:175px}
+.intake-cta strong{font-size:18px}
+.contact-box{min-height:370px}.contact-box:before{font-size:100px}
+}

@@ -45,3 +45,35 @@ footer{max-width:var(--max);margin:auto;padding:28px max(18px,4vw);display:flex;
 .company-strip{grid-template-columns:1fr}
 .company-strip a{grid-column:auto}
 }
+
+
+/* TORQUEL 2.2 — digital technical dossier */
+.dossier{background:#0a0d0f}
+.dossier-head{display:grid;grid-template-columns:1fr .8fr;gap:8vw;align-items:end;margin-bottom:55px}
+.dossier-head h2{margin-bottom:0}.dossier-head>p{color:#929b9e;font-size:14px;max-width:520px}
+.dossier-grid{display:grid;grid-template-columns:1.25fr .875fr .875fr;gap:1px;background:var(--line)}
+.dossier-card{min-height:470px;background:#111518;padding:25px;display:flex;flex-direction:column;position:relative}
+.dossier-card:hover{background:#151a1d}
+.dossier-main{background:#151a1d}.dossier-tag{font:600 9px var(--display);letter-spacing:.15em;color:#687174}
+.eyebrow{display:block;color:#687174;font-size:8px;letter-spacing:.17em;margin-top:25px}
+.dossier-card h3{font:800 34px/.9 var(--display);margin:10px 0 14px;letter-spacing:.02em}
+.dossier-card p{color:#858e91;font-size:11px;max-width:370px}.dossier-card>a{margin-top:auto;padding-top:25px;color:var(--accent);font-size:9px;text-transform:uppercase;letter-spacing:.14em}
+.diagram{height:205px;margin-top:30px;border:1px solid #2d3639;position:relative;overflow:hidden;background:#0d1113}
+.diagram:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#252d30 1px,transparent 1px),linear-gradient(90deg,#252d30 1px,transparent 1px);background-size:35px 35px;opacity:.35}
+.hydraulic i{position:absolute;left:12%;right:12%;top:52%;height:2px;background:#596367;box-shadow:0 -18px 0 #31393c,0 18px 0 #31393c}
+.hydraulic i:after{content:"";position:absolute;right:16%;top:-17px;width:35px;height:35px;border:1px solid var(--accent);border-radius:50%;background:#0d1113}
+.hydraulic b,.hydraulic small{position:absolute;z-index:2}.hydraulic b{left:20px;bottom:20px;color:var(--accent);font:700 25px var(--display)}.hydraulic small{right:20px;bottom:23px;color:#697275;font-size:7px;letter-spacing:.13em}
+.assembly b{position:absolute;left:22px;top:22px;color:var(--accent);font:700 22px var(--display)}.assembly span{position:absolute;width:70px;height:70px;border:1px solid #556064;display:grid;place-items:center;color:#c3c7c5;font:700 15px var(--display)}.assembly span:nth-of-type(1){left:22%;top:43%}.assembly span:nth-of-type(2){left:43%;top:43%;border-color:var(--accent)}.assembly span:nth-of-type(3){left:64%;top:43%}
+.torque-diagram>b{position:absolute;left:22px;top:22px;color:#697275;font:700 9px var(--sans);letter-spacing:.16em}.torque-diagram>div{position:absolute;inset:0;display:grid;place-items:center;color:var(--accent);font:400 105px var(--display)}
+.dossier-data{display:flex;flex-wrap:wrap;border:1px solid #30383b;border-top:0}.dossier-data span{flex:1;padding:14px 17px;min-width:120px;border-right:1px solid #30383b;color:#70797c;font-size:7px;letter-spacing:.16em}
+.sector-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:10vw;margin-top:35px}.sector-layout>div:first-child p{max-width:520px;color:#8e979a;font-size:14px}.sector-list{border-top:1px solid var(--line)}.sector-list>div{display:grid;grid-template-columns:45px 1fr 1fr;gap:15px;padding:19px 0;border-bottom:1px solid var(--line);align-items:center}.sector-list b{color:var(--accent);font:600 18px var(--display)}.sector-list strong{font-size:10px;letter-spacing:.14em}.sector-list span{font-size:10px;color:#717a7d}
+.intake{background:#0d1012}.intake-head{margin-bottom:45px}.intake-head h2{margin-bottom:0}.intake-flow{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:var(--line)}.intake-flow>div{background:#111518;min-height:180px;padding:20px;display:flex;flex-direction:column}.intake-flow b{color:var(--accent);font:600 17px var(--display)}.intake-flow strong{margin-top:auto;font-size:9px;letter-spacing:.15em}.intake-flow span{margin-top:8px;color:#737c7f;font-size:10px}.intake-cta{margin-top:1px;display:flex;justify-content:space-between;align-items:center;gap:20px;border:1px solid #4b5558;padding:20px 22px;background:#12171a}.intake-cta span{font-size:8px;letter-spacing:.16em;color:#737c7f}.intake-cta strong{font-size:13px;color:var(--accent)}
+.corporate-grid article,.dossier-card,.intake-flow>div{transition:transform .25s ease,background .25s ease}
+@media(max-width:850px){
+.dossier-head,.sector-layout{grid-template-columns:1fr;gap:30px}.dossier-grid{grid-template-columns:1fr}.dossier-card{min-height:420px}.intake-flow{grid-template-columns:1fr 1fr}.intake-flow>div{min-height:155px}.intake-cta{display:block}.intake-cta strong{display:block;margin-top:8px}.sector-list>div{grid-template-columns:42px 1fr}.sector-list span{grid-column:2}
+}
+@media(max-width:480px){
+.dossier-card{min-height:400px;padding:20px}.diagram{height:180px}.dossier-data span{min-width:50%;border-bottom:1px solid #30383b}.intake-flow{grid-template-columns:1fr}.intake-flow>div{min-height:140px}.intake-cta strong{font-size:12px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.corporate-grid article,.dossier-card{transition:none}}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px}

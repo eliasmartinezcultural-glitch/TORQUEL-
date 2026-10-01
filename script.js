@@ -1,12 +1,7 @@
 document.getElementById("year").textContent=new Date().getFullYear();
 
 const header=document.querySelector(".header");
-let previous=window.scrollY;
-window.addEventListener("scroll",()=>{
- const current=window.scrollY;
- header.classList.toggle("compact",current>40);
- previous=current;
-},{passive:true});
+window.addEventListener("scroll",()=>header.classList.toggle("compact",window.scrollY>40),{passive:true});
 
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
  a.addEventListener("click",event=>{
@@ -18,6 +13,12 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
 });
 
 const observer=new IntersectionObserver(entries=>{
- entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add("visible")});
+ entries.forEach(entry=>{
+  if(entry.isIntersecting){
+   entry.target.classList.add("visible");
+   observer.unobserve(entry.target);
+  }
+ });
 },{threshold:.08});
-document.querySelectorAll(".service,.steps>div,.evidence-board,.founder>div").forEach(el=>observer.observe(el));
+
+document.querySelectorAll(".service,.steps>div,.evidence-board,.founder>div,.dossier-card,.sector-list>div,.intake-flow>div").forEach(el=>observer.observe(el));
